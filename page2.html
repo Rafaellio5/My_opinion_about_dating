@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Для тебя ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      overflow: hidden;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .text {
+      max-width: 600px;
+      font-size: 22px;
+      line-height: 1.5;
+      z-index: 2;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    /* Сердечки */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(-45deg);
+      animation: fall 6s linear infinite;
+      opacity: 0.8;
+    }
+    .heart:before, .heart:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart:before { top: -10px; left: 0; }
+    .heart:after { left: 10px; top: 0; }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(-45deg) scale(0.8); opacity:0; }
+      20% { opacity:1; }
+      100% { transform: translateY(110vh) rotate(-45deg) scale(1.2); opacity:0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    Был вновь рад провести с тобой время 💖<br><br>
+    Ты — ангел 😇 и каждый раз, когда мы видимся, моей радости нет предела ✨<br><br>
+    Спасибо, что появилась в моей жизни 💕<br>
+    С нетерпением жду нашего следующего рандеву 🌹
+  </div>
+
+  <!-- Сердечки -->
+  <div class="heart" style="left:10%; animation-delay:0s;"></div>
+  <div class="heart" style="left:25%; animation-delay:1s;"></div>
+  <div class="heart" style="left:40%; animation-delay:2s;"></div>
+  <div class="heart" style="left:60%; animation-delay:0.5s;"></div>
+  <div class="heart" style="left:75%; animation-delay:1.5s;"></div>
+  <div class="heart" style="left:90%; animation-delay:2.5s;"></div>
+</body>
+</html>
