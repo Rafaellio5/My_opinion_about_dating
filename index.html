@@ -15,28 +15,36 @@
       background: linear-gradient(135deg, #ffe6f0, #fff0f5);
       overflow: hidden;
       position: relative;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
     }
 
     h1 {
       color: #b30059;
-      font-size: 36px;
-      text-align: center;
+      font-size: 32px;
       margin-bottom: 30px;
+      word-wrap: break-word;
     }
 
     .btn {
+      display: inline-block;
       background: #ff66a3;
       color: white;
       font-size: 20px;
       border: none;
-      padding: 15px 30px;
-      border-radius: 30px;
+      padding: 15px 25px;
+      border-radius: 40px;
       cursor: pointer;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
+      transition: transform 0.2s, background 0.3s;
+      max-width: 90%;
+      white-space: normal;
+      word-break: break-word;
     }
     .btn:hover {
       transform: scale(1.05);
+      background: #ff4d94;
     }
 
     /* Цветочки */
@@ -57,24 +65,24 @@
       background: pink;
       border-radius: 50%;
     }
-    .flower:before {
-      left: -20px;
-      top: 0;
-    }
-    .flower:after {
-      top: -20px;
-      left: 0;
-    }
+    .flower:before { left: -20px; top: 0; }
+    .flower:after { top: -20px; left: 0; }
 
     @keyframes float {
       0% { transform: translateY(100vh) rotate(0); }
       100% { transform: translateY(-120vh) rotate(360deg); }
     }
+
+    /* Мобильные устройства */
+    @media (max-width: 600px) {
+      h1 { font-size: 24px; }
+      .btn { font-size: 18px; padding: 14px 20px; }
+    }
   </style>
 </head>
 <body>
   <div>
-    <h1>Настюшенька,солнышко ☀️</h1>
+    <h1>Настюшенька, солнышко ☀️</h1>
     <a href="page2.html">
       <button class="btn">Нажми ❤️</button>
     </a>
