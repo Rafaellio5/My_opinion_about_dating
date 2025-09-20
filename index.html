@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Для тебя ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      color: #b30059;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #ff66a3;
+      color: white;
+      font-size: 20px;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Цветочки */
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: pink;
+      border-radius: 50%;
+      animation: float 12s linear infinite;
+      opacity: 0.7;
+    }
+    .flower:before, .flower:after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: pink;
+      border-radius: 50%;
+    }
+    .flower:before {
+      left: -20px;
+      top: 0;
+    }
+    .flower:after {
+      top: -20px;
+      left: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0); }
+      100% { transform: translateY(-120vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Моё солнышко ☀️</h1>
+    <a href="page2.html">
+      <button class="btn">Настюшенька, солнышко, нажми ❤️</button>
+    </a>
+  </div>
+
+  <!-- Цветочки -->
+  <div class="flower" style="left:10%; animation-delay:0s;"></div>
+  <div class="flower" style="left:30%; animation-delay:2s; background:#ffb6c1;"></div>
+  <div class="flower" style="left:50%; animation-delay:4s;"></div>
+  <div class="flower" style="left:70%; animation-delay:1s; background:#ffc0cb;"></div>
+  <div class="flower" style="left:90%; animation-delay:3s;"></div>
+</body>
+</html>
